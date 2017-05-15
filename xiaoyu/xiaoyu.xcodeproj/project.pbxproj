@@ -7,68 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D28DBE681EC98101006F8350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBE671EC98101006F8350 /* main.m */; };
-		D28DBE6B1EC98101006F8350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBE6A1EC98101006F8350 /* AppDelegate.m */; };
-		D28DBE6E1EC98101006F8350 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBE6D1EC98101006F8350 /* ViewController.m */; };
-		D28DBE711EC98101006F8350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28DBE6F1EC98101006F8350 /* Main.storyboard */; };
-		D28DBE731EC98101006F8350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28DBE721EC98101006F8350 /* Assets.xcassets */; };
-		D28DBE761EC98101006F8350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28DBE741EC98101006F8350 /* LaunchScreen.storyboard */; };
-		D28DBE811EC98101006F8350 /* xiaoyuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBE801EC98101006F8350 /* xiaoyuTests.m */; };
-		D28DBE8C1EC98101006F8350 /* xiaoyuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBE8B1EC98101006F8350 /* xiaoyuUITests.m */; };
+		D26140121EC4057D002E9ACE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140111EC4057D002E9ACE /* main.m */; };
+		D26140151EC4057D002E9ACE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140141EC4057D002E9ACE /* AppDelegate.m */; };
+		D26140181EC4057D002E9ACE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140171EC4057D002E9ACE /* ViewController.m */; };
+		D261401B1EC4057D002E9ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26140191EC4057D002E9ACE /* Main.storyboard */; };
+		D261401D1EC4057D002E9ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D261401C1EC4057D002E9ACE /* Assets.xcassets */; };
+		D26140201EC4057D002E9ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D261401E1EC4057D002E9ACE /* LaunchScreen.storyboard */; };
+		D261402B1EC4057D002E9ACE /* xiaoyuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D261402A1EC4057D002E9ACE /* xiaoyuTests.m */; };
+		D26140361EC4057D002E9ACE /* xiaoyuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140351EC4057D002E9ACE /* xiaoyuUITests.m */; };
+		D26140441EC406EA002E9ACE /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26140431EC406EA002E9ACE /* NemoSDK.framework */; };
+		D26140461EC4073D002E9ACE /* NemoSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D26140431EC406EA002E9ACE /* NemoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D26140491EC408FC002E9ACE /* UIView+PPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140481EC408FC002E9ACE /* UIView+PPCategory.m */; };
+		D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140511EC410AE002E9ACE /* ConnectedCallController.m */; };
+		D26140551EC410CD002E9ACE /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140541EC410CD002E9ACE /* VideoManager.m */; };
+		D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D261405C1EC4485A002E9ACE /* WZSXYSDK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D28DBE7D1EC98101006F8350 /* PBXContainerItemProxy */ = {
+		D26140271EC4057D002E9ACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D28DBE5B1EC98101006F8350 /* Project object */;
+			containerPortal = D26140051EC4057D002E9ACE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D28DBE621EC98101006F8350;
+			remoteGlobalIDString = D261400C1EC4057D002E9ACE;
 			remoteInfo = xiaoyu;
 		};
-		D28DBE881EC98101006F8350 /* PBXContainerItemProxy */ = {
+		D26140321EC4057D002E9ACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D28DBE5B1EC98101006F8350 /* Project object */;
+			containerPortal = D26140051EC4057D002E9ACE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D28DBE621EC98101006F8350;
+			remoteGlobalIDString = D261400C1EC4057D002E9ACE;
 			remoteInfo = xiaoyu;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D26140451EC40731002E9ACE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D26140461EC4073D002E9ACE /* NemoSDK.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		D28DBE631EC98101006F8350 /* xiaoyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D28DBE671EC98101006F8350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D28DBE691EC98101006F8350 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D28DBE6A1EC98101006F8350 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D28DBE6C1EC98101006F8350 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D28DBE6D1EC98101006F8350 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D28DBE701EC98101006F8350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D28DBE721EC98101006F8350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D28DBE751EC98101006F8350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D28DBE771EC98101006F8350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D28DBE7C1EC98101006F8350 /* xiaoyuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoyuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D28DBE801EC98101006F8350 /* xiaoyuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoyuTests.m; sourceTree = "<group>"; };
-		D28DBE821EC98101006F8350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D28DBE871EC98101006F8350 /* xiaoyuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoyuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D28DBE8B1EC98101006F8350 /* xiaoyuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoyuUITests.m; sourceTree = "<group>"; };
-		D28DBE8D1EC98101006F8350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D261400D1EC4057D002E9ACE /* xiaoyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiaoyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26140111EC4057D002E9ACE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D26140131EC4057D002E9ACE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D26140141EC4057D002E9ACE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D26140161EC4057D002E9ACE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D26140171EC4057D002E9ACE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D261401A1EC4057D002E9ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D261401C1EC4057D002E9ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D261401F1EC4057D002E9ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D26140211EC4057D002E9ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26140261EC4057D002E9ACE /* xiaoyuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoyuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D261402A1EC4057D002E9ACE /* xiaoyuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoyuTests.m; sourceTree = "<group>"; };
+		D261402C1EC4057D002E9ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26140311EC4057D002E9ACE /* xiaoyuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoyuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26140351EC4057D002E9ACE /* xiaoyuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoyuUITests.m; sourceTree = "<group>"; };
+		D26140371EC4057D002E9ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26140431EC406EA002E9ACE /* NemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NemoSDK.framework; sourceTree = "<group>"; };
+		D26140471EC408FC002E9ACE /* UIView+PPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PPCategory.h"; sourceTree = "<group>"; };
+		D26140481EC408FC002E9ACE /* UIView+PPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PPCategory.m"; sourceTree = "<group>"; };
+		D26140501EC410AE002E9ACE /* ConnectedCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedCallController.h; sourceTree = "<group>"; };
+		D26140511EC410AE002E9ACE /* ConnectedCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedCallController.m; sourceTree = "<group>"; };
+		D26140531EC410CD002E9ACE /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
+		D26140541EC410CD002E9ACE /* VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoManager.m; sourceTree = "<group>"; };
+		D261405B1EC4485A002E9ACE /* WZSXYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZSXYSDK.h; sourceTree = "<group>"; };
+		D261405C1EC4485A002E9ACE /* WZSXYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZSXYSDK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D28DBE601EC98101006F8350 /* Frameworks */ = {
+		D261400A1EC4057D002E9ACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26140441EC406EA002E9ACE /* NemoSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26140231EC4057D002E9ACE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D28DBE791EC98101006F8350 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D28DBE841EC98101006F8350 /* Frameworks */ = {
+		D261402E1EC4057D002E9ACE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,64 +107,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D28DBE5A1EC98101006F8350 = {
+		D26140041EC4057D002E9ACE = {
 			isa = PBXGroup;
 			children = (
-				D28DBE651EC98101006F8350 /* xiaoyu */,
-				D28DBE7F1EC98101006F8350 /* xiaoyuTests */,
-				D28DBE8A1EC98101006F8350 /* xiaoyuUITests */,
-				D28DBE641EC98101006F8350 /* Products */,
+				D26140431EC406EA002E9ACE /* NemoSDK.framework */,
+				D261400F1EC4057D002E9ACE /* xiaoyu */,
+				D26140291EC4057D002E9ACE /* xiaoyuTests */,
+				D26140341EC4057D002E9ACE /* xiaoyuUITests */,
+				D261400E1EC4057D002E9ACE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D28DBE641EC98101006F8350 /* Products */ = {
+		D261400E1EC4057D002E9ACE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D28DBE631EC98101006F8350 /* xiaoyu.app */,
-				D28DBE7C1EC98101006F8350 /* xiaoyuTests.xctest */,
-				D28DBE871EC98101006F8350 /* xiaoyuUITests.xctest */,
+				D261400D1EC4057D002E9ACE /* xiaoyu.app */,
+				D26140261EC4057D002E9ACE /* xiaoyuTests.xctest */,
+				D26140311EC4057D002E9ACE /* xiaoyuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D28DBE651EC98101006F8350 /* xiaoyu */ = {
+		D261400F1EC4057D002E9ACE /* xiaoyu */ = {
 			isa = PBXGroup;
 			children = (
-				D28DBE691EC98101006F8350 /* AppDelegate.h */,
-				D28DBE6A1EC98101006F8350 /* AppDelegate.m */,
-				D28DBE6C1EC98101006F8350 /* ViewController.h */,
-				D28DBE6D1EC98101006F8350 /* ViewController.m */,
-				D28DBE6F1EC98101006F8350 /* Main.storyboard */,
-				D28DBE721EC98101006F8350 /* Assets.xcassets */,
-				D28DBE741EC98101006F8350 /* LaunchScreen.storyboard */,
-				D28DBE771EC98101006F8350 /* Info.plist */,
-				D28DBE661EC98101006F8350 /* Supporting Files */,
+				D26140131EC4057D002E9ACE /* AppDelegate.h */,
+				D26140141EC4057D002E9ACE /* AppDelegate.m */,
+				D26140161EC4057D002E9ACE /* ViewController.h */,
+				D26140171EC4057D002E9ACE /* ViewController.m */,
+				D26140471EC408FC002E9ACE /* UIView+PPCategory.h */,
+				D26140481EC408FC002E9ACE /* UIView+PPCategory.m */,
+				D26140501EC410AE002E9ACE /* ConnectedCallController.h */,
+				D26140511EC410AE002E9ACE /* ConnectedCallController.m */,
+				D26140531EC410CD002E9ACE /* VideoManager.h */,
+				D26140541EC410CD002E9ACE /* VideoManager.m */,
+				D261405B1EC4485A002E9ACE /* WZSXYSDK.h */,
+				D261405C1EC4485A002E9ACE /* WZSXYSDK.m */,
+				D26140191EC4057D002E9ACE /* Main.storyboard */,
+				D261401C1EC4057D002E9ACE /* Assets.xcassets */,
+				D261401E1EC4057D002E9ACE /* LaunchScreen.storyboard */,
+				D26140211EC4057D002E9ACE /* Info.plist */,
+				D26140101EC4057D002E9ACE /* Supporting Files */,
 			);
 			path = xiaoyu;
 			sourceTree = "<group>";
 		};
-		D28DBE661EC98101006F8350 /* Supporting Files */ = {
+		D26140101EC4057D002E9ACE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D28DBE671EC98101006F8350 /* main.m */,
+				D26140111EC4057D002E9ACE /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D28DBE7F1EC98101006F8350 /* xiaoyuTests */ = {
+		D26140291EC4057D002E9ACE /* xiaoyuTests */ = {
 			isa = PBXGroup;
 			children = (
-				D28DBE801EC98101006F8350 /* xiaoyuTests.m */,
-				D28DBE821EC98101006F8350 /* Info.plist */,
+				D261402A1EC4057D002E9ACE /* xiaoyuTests.m */,
+				D261402C1EC4057D002E9ACE /* Info.plist */,
 			);
 			path = xiaoyuTests;
 			sourceTree = "<group>";
 		};
-		D28DBE8A1EC98101006F8350 /* xiaoyuUITests */ = {
+		D26140341EC4057D002E9ACE /* xiaoyuUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D28DBE8B1EC98101006F8350 /* xiaoyuUITests.m */,
-				D28DBE8D1EC98101006F8350 /* Info.plist */,
+				D26140351EC4057D002E9ACE /* xiaoyuUITests.m */,
+				D26140371EC4057D002E9ACE /* Info.plist */,
 			);
 			path = xiaoyuUITests;
 			sourceTree = "<group>";
@@ -143,13 +181,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D28DBE621EC98101006F8350 /* xiaoyu */ = {
+		D261400C1EC4057D002E9ACE /* xiaoyu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D28DBE901EC98102006F8350 /* Build configuration list for PBXNativeTarget "xiaoyu" */;
+			buildConfigurationList = D261403A1EC4057D002E9ACE /* Build configuration list for PBXNativeTarget "xiaoyu" */;
 			buildPhases = (
-				D28DBE5F1EC98101006F8350 /* Sources */,
-				D28DBE601EC98101006F8350 /* Frameworks */,
-				D28DBE611EC98101006F8350 /* Resources */,
+				D26140091EC4057D002E9ACE /* Sources */,
+				D261400A1EC4057D002E9ACE /* Frameworks */,
+				D261400B1EC4057D002E9ACE /* Resources */,
+				D26140451EC40731002E9ACE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -157,71 +196,72 @@
 			);
 			name = xiaoyu;
 			productName = xiaoyu;
-			productReference = D28DBE631EC98101006F8350 /* xiaoyu.app */;
+			productReference = D261400D1EC4057D002E9ACE /* xiaoyu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D28DBE7B1EC98101006F8350 /* xiaoyuTests */ = {
+		D26140251EC4057D002E9ACE /* xiaoyuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D28DBE931EC98102006F8350 /* Build configuration list for PBXNativeTarget "xiaoyuTests" */;
+			buildConfigurationList = D261403D1EC4057D002E9ACE /* Build configuration list for PBXNativeTarget "xiaoyuTests" */;
 			buildPhases = (
-				D28DBE781EC98101006F8350 /* Sources */,
-				D28DBE791EC98101006F8350 /* Frameworks */,
-				D28DBE7A1EC98101006F8350 /* Resources */,
+				D26140221EC4057D002E9ACE /* Sources */,
+				D26140231EC4057D002E9ACE /* Frameworks */,
+				D26140241EC4057D002E9ACE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D28DBE7E1EC98101006F8350 /* PBXTargetDependency */,
+				D26140281EC4057D002E9ACE /* PBXTargetDependency */,
 			);
 			name = xiaoyuTests;
 			productName = xiaoyuTests;
-			productReference = D28DBE7C1EC98101006F8350 /* xiaoyuTests.xctest */;
+			productReference = D26140261EC4057D002E9ACE /* xiaoyuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D28DBE861EC98101006F8350 /* xiaoyuUITests */ = {
+		D26140301EC4057D002E9ACE /* xiaoyuUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D28DBE961EC98102006F8350 /* Build configuration list for PBXNativeTarget "xiaoyuUITests" */;
+			buildConfigurationList = D26140401EC4057D002E9ACE /* Build configuration list for PBXNativeTarget "xiaoyuUITests" */;
 			buildPhases = (
-				D28DBE831EC98101006F8350 /* Sources */,
-				D28DBE841EC98101006F8350 /* Frameworks */,
-				D28DBE851EC98101006F8350 /* Resources */,
+				D261402D1EC4057D002E9ACE /* Sources */,
+				D261402E1EC4057D002E9ACE /* Frameworks */,
+				D261402F1EC4057D002E9ACE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D28DBE891EC98101006F8350 /* PBXTargetDependency */,
+				D26140331EC4057D002E9ACE /* PBXTargetDependency */,
 			);
 			name = xiaoyuUITests;
 			productName = xiaoyuUITests;
-			productReference = D28DBE871EC98101006F8350 /* xiaoyuUITests.xctest */;
+			productReference = D26140311EC4057D002E9ACE /* xiaoyuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D28DBE5B1EC98101006F8350 /* Project object */ = {
+		D26140051EC4057D002E9ACE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = gocomtech;
 				TargetAttributes = {
-					D28DBE621EC98101006F8350 = {
+					D261400C1EC4057D002E9ACE = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6KU368K7QY;
 						ProvisioningStyle = Automatic;
 					};
-					D28DBE7B1EC98101006F8350 = {
+					D26140251EC4057D002E9ACE = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D28DBE621EC98101006F8350;
+						TestTargetID = D261400C1EC4057D002E9ACE;
 					};
-					D28DBE861EC98101006F8350 = {
+					D26140301EC4057D002E9ACE = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = D28DBE621EC98101006F8350;
+						TestTargetID = D261400C1EC4057D002E9ACE;
 					};
 				};
 			};
-			buildConfigurationList = D28DBE5E1EC98101006F8350 /* Build configuration list for PBXProject "xiaoyu" */;
+			buildConfigurationList = D26140081EC4057D002E9ACE /* Build configuration list for PBXProject "xiaoyu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,37 +269,37 @@
 				en,
 				Base,
 			);
-			mainGroup = D28DBE5A1EC98101006F8350;
-			productRefGroup = D28DBE641EC98101006F8350 /* Products */;
+			mainGroup = D26140041EC4057D002E9ACE;
+			productRefGroup = D261400E1EC4057D002E9ACE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D28DBE621EC98101006F8350 /* xiaoyu */,
-				D28DBE7B1EC98101006F8350 /* xiaoyuTests */,
-				D28DBE861EC98101006F8350 /* xiaoyuUITests */,
+				D261400C1EC4057D002E9ACE /* xiaoyu */,
+				D26140251EC4057D002E9ACE /* xiaoyuTests */,
+				D26140301EC4057D002E9ACE /* xiaoyuUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D28DBE611EC98101006F8350 /* Resources */ = {
+		D261400B1EC4057D002E9ACE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28DBE761EC98101006F8350 /* LaunchScreen.storyboard in Resources */,
-				D28DBE731EC98101006F8350 /* Assets.xcassets in Resources */,
-				D28DBE711EC98101006F8350 /* Main.storyboard in Resources */,
+				D26140201EC4057D002E9ACE /* LaunchScreen.storyboard in Resources */,
+				D261401D1EC4057D002E9ACE /* Assets.xcassets in Resources */,
+				D261401B1EC4057D002E9ACE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D28DBE7A1EC98101006F8350 /* Resources */ = {
+		D26140241EC4057D002E9ACE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D28DBE851EC98101006F8350 /* Resources */ = {
+		D261402F1EC4057D002E9ACE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,60 +309,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D28DBE5F1EC98101006F8350 /* Sources */ = {
+		D26140091EC4057D002E9ACE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28DBE6E1EC98101006F8350 /* ViewController.m in Sources */,
-				D28DBE6B1EC98101006F8350 /* AppDelegate.m in Sources */,
-				D28DBE681EC98101006F8350 /* main.m in Sources */,
+				D26140491EC408FC002E9ACE /* UIView+PPCategory.m in Sources */,
+				D26140181EC4057D002E9ACE /* ViewController.m in Sources */,
+				D26140151EC4057D002E9ACE /* AppDelegate.m in Sources */,
+				D26140121EC4057D002E9ACE /* main.m in Sources */,
+				D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */,
+				D26140551EC410CD002E9ACE /* VideoManager.m in Sources */,
+				D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D28DBE781EC98101006F8350 /* Sources */ = {
+		D26140221EC4057D002E9ACE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28DBE811EC98101006F8350 /* xiaoyuTests.m in Sources */,
+				D261402B1EC4057D002E9ACE /* xiaoyuTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D28DBE831EC98101006F8350 /* Sources */ = {
+		D261402D1EC4057D002E9ACE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28DBE8C1EC98101006F8350 /* xiaoyuUITests.m in Sources */,
+				D26140361EC4057D002E9ACE /* xiaoyuUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D28DBE7E1EC98101006F8350 /* PBXTargetDependency */ = {
+		D26140281EC4057D002E9ACE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D28DBE621EC98101006F8350 /* xiaoyu */;
-			targetProxy = D28DBE7D1EC98101006F8350 /* PBXContainerItemProxy */;
+			target = D261400C1EC4057D002E9ACE /* xiaoyu */;
+			targetProxy = D26140271EC4057D002E9ACE /* PBXContainerItemProxy */;
 		};
-		D28DBE891EC98101006F8350 /* PBXTargetDependency */ = {
+		D26140331EC4057D002E9ACE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D28DBE621EC98101006F8350 /* xiaoyu */;
-			targetProxy = D28DBE881EC98101006F8350 /* PBXContainerItemProxy */;
+			target = D261400C1EC4057D002E9ACE /* xiaoyu */;
+			targetProxy = D26140321EC4057D002E9ACE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D28DBE6F1EC98101006F8350 /* Main.storyboard */ = {
+		D26140191EC4057D002E9ACE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D28DBE701EC98101006F8350 /* Base */,
+				D261401A1EC4057D002E9ACE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D28DBE741EC98101006F8350 /* LaunchScreen.storyboard */ = {
+		D261401E1EC4057D002E9ACE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D28DBE751EC98101006F8350 /* Base */,
+				D261401F1EC4057D002E9ACE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -330,7 +374,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D28DBE8E1EC98102006F8350 /* Debug */ = {
+		D26140381EC4057D002E9ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -378,7 +422,7 @@
 			};
 			name = Debug;
 		};
-		D28DBE8F1EC98102006F8350 /* Release */ = {
+		D26140391EC4057D002E9ACE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -420,29 +464,45 @@
 			};
 			name = Release;
 		};
-		D28DBE911EC98102006F8350 /* Debug */ = {
+		D261403B1EC4057D002E9ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6KU368K7QY;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework,
+				);
+				HEADER_SEARCH_PATHS = /Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework/Headers;
 				INFOPLIST_FILE = xiaoyu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartdot.xiaoyu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.wangzs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		D28DBE921EC98102006F8350 /* Release */ = {
+		D261403C1EC4057D002E9ACE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6KU368K7QY;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework,
+				);
+				HEADER_SEARCH_PATHS = /Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework/Headers;
 				INFOPLIST_FILE = xiaoyu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartdot.xiaoyu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.wangzs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		D28DBE941EC98102006F8350 /* Debug */ = {
+		D261403E1EC4057D002E9ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,7 +514,7 @@
 			};
 			name = Debug;
 		};
-		D28DBE951EC98102006F8350 /* Release */ = {
+		D261403F1EC4057D002E9ACE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,7 +526,7 @@
 			};
 			name = Release;
 		};
-		D28DBE971EC98102006F8350 /* Debug */ = {
+		D26140411EC4057D002E9ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = xiaoyuUITests/Info.plist;
@@ -477,7 +537,7 @@
 			};
 			name = Debug;
 		};
-		D28DBE981EC98102006F8350 /* Release */ = {
+		D26140421EC4057D002E9ACE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = xiaoyuUITests/Info.plist;
@@ -491,40 +551,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D28DBE5E1EC98101006F8350 /* Build configuration list for PBXProject "xiaoyu" */ = {
+		D26140081EC4057D002E9ACE /* Build configuration list for PBXProject "xiaoyu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D28DBE8E1EC98102006F8350 /* Debug */,
-				D28DBE8F1EC98102006F8350 /* Release */,
+				D26140381EC4057D002E9ACE /* Debug */,
+				D26140391EC4057D002E9ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D28DBE901EC98102006F8350 /* Build configuration list for PBXNativeTarget "xiaoyu" */ = {
+		D261403A1EC4057D002E9ACE /* Build configuration list for PBXNativeTarget "xiaoyu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D28DBE911EC98102006F8350 /* Debug */,
-				D28DBE921EC98102006F8350 /* Release */,
+				D261403B1EC4057D002E9ACE /* Debug */,
+				D261403C1EC4057D002E9ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D28DBE931EC98102006F8350 /* Build configuration list for PBXNativeTarget "xiaoyuTests" */ = {
+		D261403D1EC4057D002E9ACE /* Build configuration list for PBXNativeTarget "xiaoyuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D28DBE941EC98102006F8350 /* Debug */,
-				D28DBE951EC98102006F8350 /* Release */,
+				D261403E1EC4057D002E9ACE /* Debug */,
+				D261403F1EC4057D002E9ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D28DBE961EC98102006F8350 /* Build configuration list for PBXNativeTarget "xiaoyuUITests" */ = {
+		D26140401EC4057D002E9ACE /* Build configuration list for PBXNativeTarget "xiaoyuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D28DBE971EC98102006F8350 /* Debug */,
-				D28DBE981EC98102006F8350 /* Release */,
+				D26140411EC4057D002E9ACE /* Debug */,
+				D26140421EC4057D002E9ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D28DBE5B1EC98101006F8350 /* Project object */;
+	rootObject = D26140051EC4057D002E9ACE /* Project object */;
 }

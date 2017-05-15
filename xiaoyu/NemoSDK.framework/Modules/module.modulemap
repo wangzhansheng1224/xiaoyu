@@ -1,0 +1,6 @@
+framework module NemoSDK {
+  umbrella header "NemoSDK.h"
+
+  export *
+  module * { export * }
+}

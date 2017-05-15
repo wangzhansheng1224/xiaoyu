@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D28DBE621EC98101006F8350"
+               BlueprintIdentifier = "D261400C1EC4057D002E9ACE"
                BuildableName = "xiaoyu.app"
                BlueprintName = "xiaoyu"
                ReferencedContainer = "container:xiaoyu.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D28DBE7B1EC98101006F8350"
+               BlueprintIdentifier = "D26140251EC4057D002E9ACE"
                BuildableName = "xiaoyuTests.xctest"
                BlueprintName = "xiaoyuTests"
                ReferencedContainer = "container:xiaoyu.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D28DBE861EC98101006F8350"
+               BlueprintIdentifier = "D26140301EC4057D002E9ACE"
                BuildableName = "xiaoyuUITests.xctest"
                BlueprintName = "xiaoyuUITests"
                ReferencedContainer = "container:xiaoyu.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D28DBE621EC98101006F8350"
+            BlueprintIdentifier = "D261400C1EC4057D002E9ACE"
             BuildableName = "xiaoyu.app"
             BlueprintName = "xiaoyu"
             ReferencedContainer = "container:xiaoyu.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D28DBE621EC98101006F8350"
+            BlueprintIdentifier = "D261400C1EC4057D002E9ACE"
             BuildableName = "xiaoyu.app"
             BlueprintName = "xiaoyu"
             ReferencedContainer = "container:xiaoyu.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D28DBE621EC98101006F8350"
+            BlueprintIdentifier = "D261400C1EC4057D002E9ACE"
             BuildableName = "xiaoyu.app"
             BlueprintName = "xiaoyu"
             ReferencedContainer = "container:xiaoyu.xcodeproj">

@@ -2,11 +2,13 @@
 //  AppDelegate.m
 //  xiaoyu
 //
-//  Created by 王战胜 on 2017/5/15.
+//  Created by 王战胜 on 2017/5/11.
 //  Copyright © 2017年 gocomtech. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ConnectedCallController.h"
+#import "WZSXYSDK.h"
 
 @interface AppDelegate ()
 
@@ -39,6 +41,10 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    
+    if ([_controller isMemberOfClass:[ConnectedCallController class]]) {
+        [[WZSXYSDK shareXYSDK] setNewOrientation:YES];
+    }
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
