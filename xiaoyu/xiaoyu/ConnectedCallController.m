@@ -16,44 +16,52 @@
 @end
 
 @implementation ConnectedCallController
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    delegate.controller = self;
-    
-    [[VideoManager sharedInstance] localView:self.view];
-}
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    delegate.controller = nil;
-    
     [[VideoManager sharedInstance] clear];
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-    [self showOrHideButtons];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[VideoManager sharedInstance] localView:self.view];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    delegate.controller = self;
+    
     _buttons = [[NSMutableArray alloc]init];
     
     for (int i = 0; i<4; i++) {
-        UIButton *button = [[UIButton alloc]init];
-        button.tag = 1000+i;
-        [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:button];
-        [_buttons addObject:button];
+        UIButton *btn = [[UIButton alloc]init];
+        btn.frame = CGRectMake(20+100*i, 20, 80, 40);
+        btn.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
+        btn.tag = 1000+i;
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        if (btn.tag == 1000) {
+            [btn setTitle:@"挂断" forState:UIControlStateNormal];
+        }else if (btn.tag == 1001) {
+            [btn setTitle:@"静音" forState:UIControlStateNormal];
+            [btn setTitle:@"有声" forState:UIControlStateSelected];
+        }else if (btn.tag == 1002) {
+            [btn setTitle:@"后置" forState:UIControlStateNormal];
+            [btn setTitle:@"前置" forState:UIControlStateSelected];
+        }else if (btn.tag == 1003) {
+            [btn setTitle:@"语音" forState:UIControlStateNormal];
+            [btn setTitle:@"视频" forState:UIControlStateSelected];
+        }
+        
+        [self.view addSubview:btn];
+        [_buttons addObject:btn];
     }
     
-    // Do any additional setup after loading the view.
+    [self showOrHideButtons];
+    
 }
 
 - (void)btnClick:(UIButton *)sender{
@@ -77,21 +85,6 @@ static BOOL showAnimation = YES;
         showAnimation = NO;
         [_buttons enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             UIButton *btn = (UIButton *)obj;
-            btn.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
-            btn.frame = CGRectMake(20+100*(btn.tag-1000), 20, 80, 40);
-            
-            if (btn.tag == 1000) {
-                [btn setTitle:@"挂断" forState:UIControlStateNormal];
-            }else if (btn.tag == 1001) {
-                [btn setTitle:@"静音" forState:UIControlStateNormal];
-                [btn setTitle:@"有声" forState:UIControlStateSelected];
-            }else if (btn.tag == 1002) {
-                [btn setTitle:@"后置" forState:UIControlStateNormal];
-                [btn setTitle:@"前置" forState:UIControlStateSelected];
-            }else if (btn.tag == 1003) {
-                [btn setTitle:@"语音" forState:UIControlStateNormal];
-                [btn setTitle:@"视频" forState:UIControlStateSelected];
-            }
             
             [UIView animateWithDuration:1.0f animations:^{
                 btn.alpha = 1;
@@ -112,5 +105,6 @@ static BOOL showAnimation = YES;
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self showOrHideButtons];
 }
+
 
 @end

@@ -16,5 +16,4 @@
 - (void)mute:(BOOL)enable;
 - (void)switchCamera:(BOOL)enable;
 - (void)switchCallModel:(BOOL)enable;
-- (void)setNewOrientation:(BOOL)transform;
 @end

@@ -248,6 +248,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 6KU368K7QY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D26140251EC4057D002E9ACE = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -477,8 +482,9 @@
 				);
 				HEADER_SEARCH_PATHS = /Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework/Headers;
 				INFOPLIST_FILE = xiaoyu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.wangzs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartdot.xiaoyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -496,8 +502,9 @@
 				);
 				HEADER_SEARCH_PATHS = /Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework/Headers;
 				INFOPLIST_FILE = xiaoyu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.wangzs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartdot.xiaoyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -16,12 +16,6 @@
 
 @implementation ViewController
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    delegate.controller = self;
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
        
