@@ -18,9 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImageView *imageV = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    imageV.image = [UIImage imageNamed:@"BG"];
+    [self.view addSubview:imageV];
        
     UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     btn.backgroundColor=[UIColor redColor];
+    btn.center = self.view.center;
+    [btn setTitle:@"呼叫" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     

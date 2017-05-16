@@ -70,6 +70,10 @@ static WZSXYSDK *xysdk;
             
         case NemoCallState_DisConnected:{
             
+            if ([reason isEqualToString:@"CANCEL"]) {
+                [self comingCallCancel];
+            }
+            
             AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             //获取视频控制器
             UIViewController *con = delegate.controller;
@@ -79,12 +83,11 @@ static WZSXYSDK *xysdk;
             if ([con isMemberOfClass:[ConnectedCallController class]]) {
                 
                 [[self getCurrentVC] dismissViewControllerAnimated:YES completion:nil];
+                [_player stop];
                 
             }
             
-            if ([reason isEqualToString:@"CANCEL"]) {
-                [self comingCallCancel];
-            }
+            
         }
             break;
     }
@@ -126,7 +129,6 @@ static WZSXYSDK *xysdk;
 
 - (void)nemoSDKDidVideoChanged:(NSArray<NemoLayout *> *)videos{
     [[VideoManager sharedInstance] videosInSessionChanges:videos];
-    [_player stop];
 }
 
 - (void)nemoSDKDidShareImageStateChanged:(NemoContentState)state{
@@ -188,8 +190,6 @@ static WZSXYSDK *xysdk;
 
 - (void)call:(NSString *)number{
     [_nemo makeCall:@"10037415220" password:nil];
-    //播放呼叫声音
-    [self playcallsounds:YES];
 }
 
 - (void)handup{
@@ -224,7 +224,7 @@ static WZSXYSDK *xysdk;
     _player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:path] error:nil];
     
     //音量的高低 0-1
-    _player.volume = 1;
+    _player.volume = 0.5;
     
     //左右声道 -1 到 1 默认是0 双声道
     //  _player.pan = 0;
@@ -233,11 +233,11 @@ static WZSXYSDK *xysdk;
     _player.numberOfLoops = -1;
     
     //准备播放 去加载数据 歌曲
-//    [_player prepareToPlay];
-//    [_player stop];
+    [_player prepareToPlay];
     
     //正式播放
     [_player play];
 }
+
 
 @end

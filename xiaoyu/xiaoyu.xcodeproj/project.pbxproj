@@ -23,6 +23,8 @@
 		D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D261405C1EC4485A002E9ACE /* WZSXYSDK.m */; };
 		D28DBEE11EC9B7FB006F8350 /* ringbacktone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */; };
 		D28DBEE21EC9B7FB006F8350 /* RingTone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEE01EC9B7FB006F8350 /* RingTone.wav */; };
+		D28DBEE81ECAA17C006F8350 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEE71ECAA17C006F8350 /* BG.png */; };
+		D28DBF2D1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF2C1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		D261405C1EC4485A002E9ACE /* WZSXYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZSXYSDK.m; sourceTree = "<group>"; };
 		D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringbacktone.wav; sourceTree = "<group>"; };
 		D28DBEE01EC9B7FB006F8350 /* RingTone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RingTone.wav; sourceTree = "<group>"; };
+		D28DBEE71ECAA17C006F8350 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
+		D28DBF2C1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "齐晨-咱们结婚吧.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 		D261400F1EC4057D002E9ACE /* xiaoyu */ = {
 			isa = PBXGroup;
 			children = (
+				D28DBF2C1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 */,
+				D28DBEE71ECAA17C006F8350 /* BG.png */,
 				D26140131EC4057D002E9ACE /* AppDelegate.h */,
 				D26140141EC4057D002E9ACE /* AppDelegate.m */,
 				D26140161EC4057D002E9ACE /* ViewController.h */,
@@ -299,6 +305,8 @@
 			files = (
 				D28DBEE21EC9B7FB006F8350 /* RingTone.wav in Resources */,
 				D26140201EC4057D002E9ACE /* LaunchScreen.storyboard in Resources */,
+				D28DBF2D1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 in Resources */,
+				D28DBEE81ECAA17C006F8350 /* BG.png in Resources */,
 				D261401D1EC4057D002E9ACE /* Assets.xcassets in Resources */,
 				D261401B1EC4057D002E9ACE /* Main.storyboard in Resources */,
 				D28DBEE11EC9B7FB006F8350 /* ringbacktone.wav in Resources */,

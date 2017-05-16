@@ -10,7 +10,6 @@
 #import "VideoManager.h"
 #import "AppDelegate.h"
 #import "WZSXYSDK.h"
-
 @interface ConnectedCallController ()
 @property (strong, nonatomic) NSMutableArray *buttons;
 @end
@@ -20,10 +19,11 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[VideoManager sharedInstance] localView:self.view];
+
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
     
     [[VideoManager sharedInstance] clear];
     
