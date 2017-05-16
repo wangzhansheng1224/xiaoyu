@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UITextField *tf;
 @end
 
 @implementation ViewController
@@ -21,8 +21,16 @@
     UIImageView *imageV = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     imageV.image = [UIImage imageNamed:@"BG"];
     [self.view addSubview:imageV];
+    
+    _tf = [[UITextField alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
+    _tf.backgroundColor = [UIColor yellowColor];
+    _tf.center = CGPointMake(self.view.center.x, self.view.center.y-150);
+    _tf.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _tf.text = @"10037415220";
+    [self.view addSubview:_tf];
+    
        
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
     btn.backgroundColor=[UIColor redColor];
     btn.center = self.view.center;
     [btn setTitle:@"呼叫" forState:UIControlStateNormal];
@@ -30,10 +38,9 @@
     [self.view addSubview:btn];
     
     [[WZSXYSDK shareXYSDK]setupXYSDK];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)btnClick{
-    [[WZSXYSDK shareXYSDK]call:nil];
+    [[WZSXYSDK shareXYSDK]call:_tf.text];
 }
 @end

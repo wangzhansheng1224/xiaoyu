@@ -13,6 +13,7 @@
 #import "ConnectedCallController.h"
 #import "AppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
+#import "MBProgressHUD+FX.h"
 #define XYSDK_EXTID @"4b6f9e3bb0ff4b25fbe73ef979132dcdeeda6aa8"
 
 @interface WZSXYSDK ()<NemoSDKDelegate>
@@ -32,21 +33,23 @@ static WZSXYSDK *xysdk;
 }
 
 - (void)setupXYSDK{
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    indicator.size = CGSizeMake(80, 80);
-    indicator.center = CGPointMake(self.view.width / 2, self.view.height / 2);
-    indicator.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.670];
-    indicator.clipsToBounds = YES;
-    indicator.layer.cornerRadius = 6;
-    [indicator startAnimating];
-    [[self getCurrentVC].view addSubview:indicator];
+//    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//    indicator.size = CGSizeMake(80, 80);
+//    indicator.center = CGPointMake(self.view.width / 2, self.view.height / 2);
+//    indicator.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.670];
+//    indicator.clipsToBounds = YES;
+//    indicator.layer.cornerRadius = 6;
+//    [indicator startAnimating];
+//    [[self getCurrentVC].view addSubview:indicator];
+    MBProgressHUD *hud = [MBProgressHUD showMessage:@"SDK初始化.."];
     
     _nemo =  [NemoSDK shareNemoSessionExtID:XYSDK_EXTID privateServer:nil];
     [_nemo registerExtUserWithExtUserID:@"wang@hdkj" displayName:@"王" completion:^(NSString *result) {
         
         NSLog(@"%@",result);
         if ([result hasPrefix:@"+86"]) {
-            [indicator removeFromSuperview];
+//            [indicator removeFromSuperview];
+            [hud hide:YES];
         }
         
     }];
@@ -58,35 +61,35 @@ static WZSXYSDK *xysdk;
           stateChanged:(NemoCallState)callState
                 reason:(NSString *)reason{
     
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    //获取视频控制器
+    UIViewController *con = delegate.controller;
     
     switch (callState) {
         case NemoCallState_Connecting: case NemoCallState_Connected :{
-            
-            ConnectedCallController *vc = [[ConnectedCallController alloc]init];
-            [[self getCurrentVC] presentViewController:vc animated:YES completion:nil];
-            
+            if (![con isMemberOfClass:[ConnectedCallController class]]) {
+                ConnectedCallController *vc = [[ConnectedCallController alloc]init];
+                [[self getCurrentVC] presentViewController:vc animated:YES completion:nil];
+            }
         }
             break;
             
         case NemoCallState_DisConnected:{
             
-            if ([reason isEqualToString:@"CANCEL"]) {
-                [self comingCallCancel];
-            }
-            
-            AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-            //获取视频控制器
-            UIViewController *con = delegate.controller;
-            
             delegate.controller = nil;
             
             if ([con isMemberOfClass:[ConnectedCallController class]]) {
-                
                 [[self getCurrentVC] dismissViewControllerAnimated:YES completion:nil];
-                [_player stop];
-                
             }
             
+            if ([reason isEqualToString:@"CANCEL"]) {
+                [self comingCallCancel];
+                [MBProgressHUD show:@"已取消通话" icon:nil view:nil];
+            }else if ([reason isEqualToString:@"BUSY"]){
+                [MBProgressHUD show:@"对方忙线中" icon:nil view:nil];
+            }else if (([reason isEqualToString:@"STATUS_OK"]) ){
+                [MBProgressHUD show:@"通话已结束" icon:nil view:nil];
+            }
             
         }
             break;
@@ -104,12 +107,13 @@ static WZSXYSDK *xysdk;
     
     UILabel *numLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 20)];
     numLabel.text = number;
-    numLabel.textAlignment = UITextAlignmentCenter;
+    numLabel.textAlignment = NSTextAlignmentCenter;
     [_comingCallBackView addSubview:numLabel];
     
     UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 30, 200, 20)];
     nameLabel.text = displayName;
-    nameLabel.textAlignment = UITextAlignmentCenter;
+    nameLabel.textAlignment = NSTextAlignmentCenter;
+
     [_comingCallBackView addSubview:nameLabel];
     
     UIButton *rejectBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 50, 100, 50)];
@@ -158,6 +162,29 @@ static WZSXYSDK *xysdk;
     }
 }
 
+- (void)call:(NSString *)number{
+    [_nemo makeCall:number password:nil];
+}
+
+- (void)handup{
+    [_nemo hangup];
+}
+
+//静音
+- (void)mute:(BOOL)enable{
+    [_nemo enableAudioOfMic:enable];
+}
+
+- (void)switchCamera:(BOOL)enable{
+    [_nemo switchCamera:enable ? NemoDeviceType_BackCamera : NemoDeviceType_FrontCamera];
+}
+
+- (void)switchCallModel:(BOOL)enable{
+    [_nemo enableVideo:!enable];
+    [[VideoManager sharedInstance] audioMode:enable];
+}
+
+
 
 - (UIViewController *)getCurrentVC
 {
@@ -187,29 +214,6 @@ static WZSXYSDK *xysdk;
     return result;
 }
 
-
-- (void)call:(NSString *)number{
-    [_nemo makeCall:@"10037415220" password:nil];
-}
-
-- (void)handup{
-    [_nemo hangup];
-}
-
-//静音
-- (void)mute:(BOOL)enable{
-    [_nemo enableAudioOfMic:enable];
-}
-
-- (void)switchCamera:(BOOL)enable{
-    [_nemo switchCamera:enable ? NemoDeviceType_BackCamera : NemoDeviceType_FrontCamera];
-}
-
-- (void)switchCallModel:(BOOL)enable{
-    [_nemo enableVideo:!enable];
-    [[VideoManager sharedInstance] audioMode:enable];
-}
-
 - (void)playcallsounds:(BOOL)iscall{
     
     //声音路径
@@ -224,7 +228,7 @@ static WZSXYSDK *xysdk;
     _player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:path] error:nil];
     
     //音量的高低 0-1
-    _player.volume = 0.5;
+    _player.volume = 1;
     
     //左右声道 -1 到 1 默认是0 双声道
     //  _player.pan = 0;

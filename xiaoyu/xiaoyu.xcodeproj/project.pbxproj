@@ -24,7 +24,9 @@
 		D28DBEE11EC9B7FB006F8350 /* ringbacktone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */; };
 		D28DBEE21EC9B7FB006F8350 /* RingTone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEE01EC9B7FB006F8350 /* RingTone.wav */; };
 		D28DBEE81ECAA17C006F8350 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEE71ECAA17C006F8350 /* BG.png */; };
-		D28DBF2D1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF2C1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 */; };
+		D28DBF3E1ECAF5F7006F8350 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBF3D1ECAF5F7006F8350 /* MBProgressHUD.m */; };
+		D28DBF431ECAF5FB006F8350 /* MBProgressHUD+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBF411ECAF5FB006F8350 /* MBProgressHUD+FX.m */; };
+		D28DBF441ECAF5FB006F8350 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF421ECAF5FB006F8350 /* MBProgressHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +88,11 @@
 		D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringbacktone.wav; sourceTree = "<group>"; };
 		D28DBEE01EC9B7FB006F8350 /* RingTone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RingTone.wav; sourceTree = "<group>"; };
 		D28DBEE71ECAA17C006F8350 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
-		D28DBF2C1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "齐晨-咱们结婚吧.mp3"; sourceTree = "<group>"; };
+		D28DBF3C1ECAF5F7006F8350 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D28DBF3D1ECAF5F7006F8350 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D28DBF401ECAF5FB006F8350 /* MBProgressHUD+FX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+FX.h"; sourceTree = "<group>"; };
+		D28DBF411ECAF5FB006F8350 /* MBProgressHUD+FX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+FX.m"; sourceTree = "<group>"; };
+		D28DBF421ECAF5FB006F8350 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +145,8 @@
 		D261400F1EC4057D002E9ACE /* xiaoyu */ = {
 			isa = PBXGroup;
 			children = (
-				D28DBF2C1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 */,
+				D28DBF3F1ECAF5FB006F8350 /* MBProgressHuDHelper */,
+				D28DBF3B1ECAF5F7006F8350 /* MBProgressHUD */,
 				D28DBEE71ECAA17C006F8350 /* BG.png */,
 				D26140131EC4057D002E9ACE /* AppDelegate.h */,
 				D26140141EC4057D002E9ACE /* AppDelegate.m */,
@@ -188,6 +195,25 @@
 				D26140371EC4057D002E9ACE /* Info.plist */,
 			);
 			path = xiaoyuUITests;
+			sourceTree = "<group>";
+		};
+		D28DBF3B1ECAF5F7006F8350 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D28DBF3C1ECAF5F7006F8350 /* MBProgressHUD.h */,
+				D28DBF3D1ECAF5F7006F8350 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		D28DBF3F1ECAF5FB006F8350 /* MBProgressHuDHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D28DBF401ECAF5FB006F8350 /* MBProgressHUD+FX.h */,
+				D28DBF411ECAF5FB006F8350 /* MBProgressHUD+FX.m */,
+				D28DBF421ECAF5FB006F8350 /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHuDHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,11 +331,11 @@
 			files = (
 				D28DBEE21EC9B7FB006F8350 /* RingTone.wav in Resources */,
 				D26140201EC4057D002E9ACE /* LaunchScreen.storyboard in Resources */,
-				D28DBF2D1ECAD082006F8350 /* 齐晨-咱们结婚吧.mp3 in Resources */,
 				D28DBEE81ECAA17C006F8350 /* BG.png in Resources */,
 				D261401D1EC4057D002E9ACE /* Assets.xcassets in Resources */,
 				D261401B1EC4057D002E9ACE /* Main.storyboard in Resources */,
 				D28DBEE11EC9B7FB006F8350 /* ringbacktone.wav in Resources */,
+				D28DBF441ECAF5FB006F8350 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +363,12 @@
 				D26140491EC408FC002E9ACE /* UIView+PPCategory.m in Sources */,
 				D26140181EC4057D002E9ACE /* ViewController.m in Sources */,
 				D26140151EC4057D002E9ACE /* AppDelegate.m in Sources */,
+				D28DBF431ECAF5FB006F8350 /* MBProgressHUD+FX.m in Sources */,
 				D26140121EC4057D002E9ACE /* main.m in Sources */,
 				D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */,
 				D26140551EC410CD002E9ACE /* VideoManager.m in Sources */,
 				D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */,
+				D28DBF3E1ECAF5F7006F8350 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
