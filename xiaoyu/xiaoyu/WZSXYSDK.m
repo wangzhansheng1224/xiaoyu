@@ -12,11 +12,13 @@
 #import "VideoManager.h"
 #import "ConnectedCallController.h"
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 #define XYSDK_EXTID @"4b6f9e3bb0ff4b25fbe73ef979132dcdeeda6aa8"
 
 @interface WZSXYSDK ()<NemoSDKDelegate>
 @property (nonatomic, strong) NemoSDK *nemo;
 @property (nonatomic, strong) UIView *comingCallBackView;
+@property (nonatomic, strong) AVAudioPlayer *player;
 @end
 
 @implementation WZSXYSDK
@@ -56,6 +58,7 @@ static WZSXYSDK *xysdk;
           stateChanged:(NemoCallState)callState
                 reason:(NSString *)reason{
     
+    
     switch (callState) {
         case NemoCallState_Connecting: case NemoCallState_Connected :{
             
@@ -76,7 +79,7 @@ static WZSXYSDK *xysdk;
             if ([con isMemberOfClass:[ConnectedCallController class]]) {
                 
                 [[self getCurrentVC] dismissViewControllerAnimated:YES completion:nil];
-    
+                
             }
             
             if ([reason isEqualToString:@"CANCEL"]) {
@@ -90,6 +93,8 @@ static WZSXYSDK *xysdk;
 
 
 - (void)nemoSDKDidReceiveCall:(NSString *)number displayName:(NSString *)displayName{
+    
+    [self playcallsounds:NO];
     _comingCallBackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
     _comingCallBackView.center = self.view.center;
     _comingCallBackView.backgroundColor = [UIColor greenColor];
@@ -121,6 +126,7 @@ static WZSXYSDK *xysdk;
 
 - (void)nemoSDKDidVideoChanged:(NSArray<NemoLayout *> *)videos{
     [[VideoManager sharedInstance] videosInSessionChanges:videos];
+    [_player stop];
 }
 
 - (void)nemoSDKDidShareImageStateChanged:(NemoContentState)state{
@@ -134,16 +140,19 @@ static WZSXYSDK *xysdk;
 - (void)rejectBtnClick{
     [_nemo hangup];
     self.comingCallBackView.hidden = YES;
+    [_player stop];
 }
 
 - (void)acceptBtnClick{
     [_nemo answer];
     self.comingCallBackView.hidden = YES;
+    [_player stop];
 }
 
 - (void)comingCallCancel{
     if (self.comingCallBackView.hidden == NO) {
         self.comingCallBackView.hidden = YES;
+        [_player stop];
     }
 }
 
@@ -179,6 +188,8 @@ static WZSXYSDK *xysdk;
 
 - (void)call:(NSString *)number{
     [_nemo makeCall:@"10037415220" password:nil];
+    //播放呼叫声音
+    [self playcallsounds:YES];
 }
 
 - (void)handup{
@@ -191,16 +202,42 @@ static WZSXYSDK *xysdk;
 }
 
 - (void)switchCamera:(BOOL)enable{
-    if (enable == YES) {
-        [_nemo switchCamera:NemoDeviceType_BackCamera];
-    }else{
-        [_nemo switchCamera:NemoDeviceType_FrontCamera];
-    }
+    [_nemo switchCamera:enable ? NemoDeviceType_BackCamera : NemoDeviceType_FrontCamera];
 }
 
 - (void)switchCallModel:(BOOL)enable{
     [_nemo enableVideo:!enable];
     [[VideoManager sharedInstance] audioMode:enable];
+}
+
+- (void)playcallsounds:(BOOL)iscall{
+    
+    //声音路径
+    NSString *path;
+    if (iscall) {
+        path = [[NSBundle mainBundle] pathForResource:@"ringbacktone" ofType:@"wav"];
+    }else{
+        path = [[NSBundle mainBundle] pathForResource:@"RingTone" ofType:@"wav"];
+    }
+    
+    //第一个参数  文件路径的URL
+    _player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:path] error:nil];
+    
+    //音量的高低 0-1
+    _player.volume = 1;
+    
+    //左右声道 -1 到 1 默认是0 双声道
+    //  _player.pan = 0;
+    
+    //无限循环
+    _player.numberOfLoops = -1;
+    
+    //准备播放 去加载数据 歌曲
+//    [_player prepareToPlay];
+//    [_player stop];
+    
+    //正式播放
+    [_player play];
 }
 
 @end

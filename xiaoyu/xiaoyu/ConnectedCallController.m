@@ -17,16 +17,16 @@
 
 @implementation ConnectedCallController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[VideoManager sharedInstance] localView:self.view];
+}
+
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
     [[VideoManager sharedInstance] clear];
     
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [[VideoManager sharedInstance] localView:self.view];
 }
 
 - (void)viewDidLoad {

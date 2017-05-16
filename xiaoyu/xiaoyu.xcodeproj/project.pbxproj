@@ -21,6 +21,8 @@
 		D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140511EC410AE002E9ACE /* ConnectedCallController.m */; };
 		D26140551EC410CD002E9ACE /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140541EC410CD002E9ACE /* VideoManager.m */; };
 		D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D261405C1EC4485A002E9ACE /* WZSXYSDK.m */; };
+		D28DBEE11EC9B7FB006F8350 /* ringbacktone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */; };
+		D28DBEE21EC9B7FB006F8350 /* RingTone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBEE01EC9B7FB006F8350 /* RingTone.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		D26140541EC410CD002E9ACE /* VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoManager.m; sourceTree = "<group>"; };
 		D261405B1EC4485A002E9ACE /* WZSXYSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZSXYSDK.h; sourceTree = "<group>"; };
 		D261405C1EC4485A002E9ACE /* WZSXYSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZSXYSDK.m; sourceTree = "<group>"; };
+		D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringbacktone.wav; sourceTree = "<group>"; };
+		D28DBEE01EC9B7FB006F8350 /* RingTone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RingTone.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 				D26140541EC410CD002E9ACE /* VideoManager.m */,
 				D261405B1EC4485A002E9ACE /* WZSXYSDK.h */,
 				D261405C1EC4485A002E9ACE /* WZSXYSDK.m */,
+				D28DBEDF1EC9B7FB006F8350 /* ringbacktone.wav */,
+				D28DBEE01EC9B7FB006F8350 /* RingTone.wav */,
 				D26140191EC4057D002E9ACE /* Main.storyboard */,
 				D261401C1EC4057D002E9ACE /* Assets.xcassets */,
 				D261401E1EC4057D002E9ACE /* LaunchScreen.storyboard */,
@@ -291,9 +297,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28DBEE21EC9B7FB006F8350 /* RingTone.wav in Resources */,
 				D26140201EC4057D002E9ACE /* LaunchScreen.storyboard in Resources */,
 				D261401D1EC4057D002E9ACE /* Assets.xcassets in Resources */,
 				D261401B1EC4057D002E9ACE /* Main.storyboard in Resources */,
+				D28DBEE11EC9B7FB006F8350 /* ringbacktone.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
