@@ -47,6 +47,8 @@
     hud.removeFromSuperViewOnHide = YES;
     // YES代表需要蒙版效果
     hud.dimBackground = NO;
+    //背景可点击
+    hud.userInteractionEnabled = NO;
     
     return hud;
 }

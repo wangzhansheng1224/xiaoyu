@@ -19,14 +19,19 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[VideoManager sharedInstance] localView:self.view];
+}
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if ([WZSXYSDK shareXYSDK].iscall) {
+        [[WZSXYSDK shareXYSDK]playcallsounds];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    
     [[VideoManager sharedInstance] clear];
-    
+    [WZSXYSDK shareXYSDK].iscall = NO;
 }
 
 - (void)viewDidLoad {
@@ -61,7 +66,7 @@
     }
     
     [self showOrHideButtons];
-    
+   
 }
 
 - (void)btnClick:(UIButton *)sender{
@@ -105,6 +110,5 @@ static BOOL showAnimation = YES;
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self showOrHideButtons];
 }
-
 
 @end

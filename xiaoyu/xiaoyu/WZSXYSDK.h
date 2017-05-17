@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WZSXYSDK : UIViewController
+@property (nonatomic, assign) BOOL iscall;
 + (instancetype)shareXYSDK;
 - (void)setupXYSDK;
 - (void)call:(NSString *)number;
@@ -16,4 +17,5 @@
 - (void)mute:(BOOL)enable;
 - (void)switchCamera:(BOOL)enable;
 - (void)switchCallModel:(BOOL)enable;
+- (void)playcallsounds;
 @end

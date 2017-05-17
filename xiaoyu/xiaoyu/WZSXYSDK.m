@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NemoSDK *nemo;
 @property (nonatomic, strong) UIView *comingCallBackView;
 @property (nonatomic, strong) AVAudioPlayer *player;
+@property (nonatomic, strong) MBProgressHUD *hud;
 @end
 
 @implementation WZSXYSDK
@@ -79,6 +80,8 @@ static WZSXYSDK *xysdk;
             delegate.controller = nil;
             
             if ([con isMemberOfClass:[ConnectedCallController class]]) {
+                [_player stop];
+                [_hud hide:YES];
                 [[self getCurrentVC] dismissViewControllerAnimated:YES completion:nil];
             }
             
@@ -87,8 +90,10 @@ static WZSXYSDK *xysdk;
                 [MBProgressHUD show:@"已取消通话" icon:nil view:nil];
             }else if ([reason isEqualToString:@"BUSY"]){
                 [MBProgressHUD show:@"对方忙线中" icon:nil view:nil];
-            }else if (([reason isEqualToString:@"STATUS_OK"]) ){
+            }else if ([reason isEqualToString:@"STATUS_OK"]){
                 [MBProgressHUD show:@"通话已结束" icon:nil view:nil];
+            }else if ([reason isEqualToString:@"PEER_NOT_FOUND"]){
+                [MBProgressHUD show:@"无人应答" icon:nil view:nil];
             }
             
         }
@@ -100,7 +105,7 @@ static WZSXYSDK *xysdk;
 
 - (void)nemoSDKDidReceiveCall:(NSString *)number displayName:(NSString *)displayName{
     
-    [self playcallsounds:NO];
+    [self playcallsounds];
     _comingCallBackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
     _comingCallBackView.center = self.view.center;
     _comingCallBackView.backgroundColor = [UIColor greenColor];
@@ -133,6 +138,8 @@ static WZSXYSDK *xysdk;
 
 - (void)nemoSDKDidVideoChanged:(NSArray<NemoLayout *> *)videos{
     [[VideoManager sharedInstance] videosInSessionChanges:videos];
+    [_player stop];
+    [_hud hide:YES];
 }
 
 - (void)nemoSDKDidShareImageStateChanged:(NemoContentState)state{
@@ -144,15 +151,15 @@ static WZSXYSDK *xysdk;
 }
 
 - (void)rejectBtnClick{
+    [_player stop];
     [_nemo hangup];
     self.comingCallBackView.hidden = YES;
-    [_player stop];
 }
 
 - (void)acceptBtnClick{
+    [_player stop];
     [_nemo answer];
     self.comingCallBackView.hidden = YES;
-    [_player stop];
 }
 
 - (void)comingCallCancel{
@@ -163,7 +170,10 @@ static WZSXYSDK *xysdk;
 }
 
 - (void)call:(NSString *)number{
+    _hud = [MBProgressHUD showMessage:@"正在呼叫"];
     [_nemo makeCall:number password:nil];
+    _iscall = YES;
+   
 }
 
 - (void)handup{
@@ -214,24 +224,15 @@ static WZSXYSDK *xysdk;
     return result;
 }
 
-- (void)playcallsounds:(BOOL)iscall{
+- (void)playcallsounds{
     
     //声音路径
-    NSString *path;
-    if (iscall) {
-        path = [[NSBundle mainBundle] pathForResource:@"ringbacktone" ofType:@"wav"];
-    }else{
-        path = [[NSBundle mainBundle] pathForResource:@"RingTone" ofType:@"wav"];
-    }
-    
-    //第一个参数  文件路径的URL
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ringtone" ofType:@"wav"];
+       //第一个参数  文件路径的URL
     _player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:path] error:nil];
     
     //音量的高低 0-1
     _player.volume = 1;
-    
-    //左右声道 -1 到 1 默认是0 双声道
-    //  _player.pan = 0;
     
     //无限循环
     _player.numberOfLoops = -1;
