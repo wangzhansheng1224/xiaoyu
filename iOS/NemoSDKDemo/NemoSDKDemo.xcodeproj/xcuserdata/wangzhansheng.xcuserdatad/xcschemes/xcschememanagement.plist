@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>NemoSDKDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0B1905A41DB5F75D00D05DC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0B1905BD1DB5F75D00D05DC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0B1905C81DB5F75D00D05DC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

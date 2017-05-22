@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B031ECF1E5C283C00FA6957 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B031ECE1E5C283C00FA6957 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0B1905AA1DB5F75D00D05DC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1905A91DB5F75D00D05DC8 /* main.m */; };
+		0B1905B51DB5F75D00D05DC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1905B41DB5F75D00D05DC8 /* Assets.xcassets */; };
+		0B1905CE1DB5F75D00D05DC8 /* NemoSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1905CD1DB5F75D00D05DC8 /* NemoSDKDemoUITests.m */; };
+		0B48BAAA1DF5036000407381 /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B48BAA91DF5036000407381 /* TabbarController.m */; };
+		0B59E81C1E31ACAA00484437 /* NemoSDKRegisterAndLoginTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59E81B1E31ACAA00484437 /* NemoSDKRegisterAndLoginTest.m */; };
+		0BA470691E30B2B800EAE426 /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA972BD1DB62BFB005F65C4 /* NemoSDK.framework */; };
+		0BA8C1D41E233C07007562E1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA8C1D31E233C07007562E1 /* MainViewController.m */; };
+		0BA96A0D1DB60A1B005F65C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA96A071DB60A1B005F65C4 /* AppDelegate.m */; };
+		0BA96A0E1DB60A1B005F65C4 /* ConnectedCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA96A091DB60A1B005F65C4 /* ConnectedCallController.m */; };
+		0BA96A111DB60A2B005F65C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA96A101DB60A2B005F65C4 /* Main.storyboard */; };
+		0BA972BF1DB62C1A005F65C4 /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA972BD1DB62BFB005F65C4 /* NemoSDK.framework */; };
+		0BF472E01E0BC3BE002671FA /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF472DF1E0BC3BE002671FA /* VideoManager.m */; };
+		D26470971EAF3FB3005CDE57 /* NemoSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0BA972BD1DB62BFB005F65C4 /* NemoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B1905BF1DB5F75D00D05DC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B19059D1DB5F75D00D05DC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B1905A41DB5F75D00D05DC8;
+			remoteInfo = NemoSDKDemo;
+		};
+		0B1905CA1DB5F75D00D05DC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B19059D1DB5F75D00D05DC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B1905A41DB5F75D00D05DC8;
+			remoteInfo = NemoSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0BA972A91DB620A5005F65C4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D26470971EAF3FB3005CDE57 /* NemoSDK.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0B031ECE1E5C283C00FA6957 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		0B1905A51DB5F75D00D05DC8 /* NemoSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NemoSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1905A91DB5F75D00D05DC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0B1905B41DB5F75D00D05DC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B1905B91DB5F75D00D05DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B1905BE1DB5F75D00D05DC8 /* NemoSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NemoSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1905C41DB5F75D00D05DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B1905C91DB5F75D00D05DC8 /* NemoSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NemoSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1905CD1DB5F75D00D05DC8 /* NemoSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NemoSDKDemoUITests.m; sourceTree = "<group>"; };
+		0B1905CF1DB5F75D00D05DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B48BAA81DF5036000407381 /* TabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarController.h; sourceTree = "<group>"; };
+		0B48BAA91DF5036000407381 /* TabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarController.m; sourceTree = "<group>"; };
+		0B59E81B1E31ACAA00484437 /* NemoSDKRegisterAndLoginTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NemoSDKRegisterAndLoginTest.m; sourceTree = "<group>"; };
+		0BA8C1D21E233C07007562E1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0BA8C1D31E233C07007562E1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0BA96A061DB60A1B005F65C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0BA96A071DB60A1B005F65C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0BA96A081DB60A1B005F65C4 /* ConnectedCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedCallController.h; sourceTree = "<group>"; };
+		0BA96A091DB60A1B005F65C4 /* ConnectedCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedCallController.m; sourceTree = "<group>"; };
+		0BA96A101DB60A2B005F65C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0BA972BD1DB62BFB005F65C4 /* NemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NemoSDK.framework; path = ../NemoSDK/NemoSDK.framework; sourceTree = "<group>"; };
+		0BBEF8F41DF115B800EFA6DD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0BF472DE1E0BC3BE002671FA /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
+		0BF472DF1E0BC3BE002671FA /* VideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoManager.m; sourceTree = "<group>"; };
+		0BF905441E495F6700F0F794 /* NemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NemoSDK.framework; path = ../NemoSDK/./NemoSDK.framework; sourceTree = "<group>"; };
+		0BFE5D221E14D937002AB8C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B1905A21DB5F75D00D05DC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B031ECF1E5C283C00FA6957 /* UserNotifications.framework in Frameworks */,
+				0BA972BF1DB62C1A005F65C4 /* NemoSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B1905BB1DB5F75D00D05DC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA470691E30B2B800EAE426 /* NemoSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B1905C61DB5F75D00D05DC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B19059C1DB5F75D00D05DC8 = {
+			isa = PBXGroup;
+			children = (
+				0BA972BD1DB62BFB005F65C4 /* NemoSDK.framework */,
+				0B1905A71DB5F75D00D05DC8 /* NemoSDKDemo */,
+				0B1905C11DB5F75D00D05DC8 /* NemoSDKDemoTests */,
+				0B1905CC1DB5F75D00D05DC8 /* NemoSDKDemoUITests */,
+				0B1905A61DB5F75D00D05DC8 /* Products */,
+				0BFE5D211E14D937002AB8C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0B1905A61DB5F75D00D05DC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B1905A51DB5F75D00D05DC8 /* NemoSDKDemo.app */,
+				0B1905BE1DB5F75D00D05DC8 /* NemoSDKDemoTests.xctest */,
+				0B1905C91DB5F75D00D05DC8 /* NemoSDKDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B1905A71DB5F75D00D05DC8 /* NemoSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0BFE5D241E14D954002AB8C5 /* Manager */,
+				0BA96A061DB60A1B005F65C4 /* AppDelegate.h */,
+				0BA96A071DB60A1B005F65C4 /* AppDelegate.m */,
+				0B48BAA81DF5036000407381 /* TabbarController.h */,
+				0B48BAA91DF5036000407381 /* TabbarController.m */,
+				0BA8C1D21E233C07007562E1 /* MainViewController.h */,
+				0BA8C1D31E233C07007562E1 /* MainViewController.m */,
+				0BA96A081DB60A1B005F65C4 /* ConnectedCallController.h */,
+				0BA96A091DB60A1B005F65C4 /* ConnectedCallController.m */,
+				0BA96A101DB60A2B005F65C4 /* Main.storyboard */,
+				0B1905B41DB5F75D00D05DC8 /* Assets.xcassets */,
+				0B1905B91DB5F75D00D05DC8 /* Info.plist */,
+				0B1905A81DB5F75D00D05DC8 /* Supporting Files */,
+				0BBEF8F41DF115B800EFA6DD /* PrefixHeader.pch */,
+			);
+			path = NemoSDKDemo;
+			sourceTree = "<group>";
+		};
+		0B1905A81DB5F75D00D05DC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B1905A91DB5F75D00D05DC8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B1905C11DB5F75D00D05DC8 /* NemoSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B59E81B1E31ACAA00484437 /* NemoSDKRegisterAndLoginTest.m */,
+				0B1905C41DB5F75D00D05DC8 /* Info.plist */,
+			);
+			path = NemoSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		0B1905CC1DB5F75D00D05DC8 /* NemoSDKDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0B1905CD1DB5F75D00D05DC8 /* NemoSDKDemoUITests.m */,
+				0B1905CF1DB5F75D00D05DC8 /* Info.plist */,
+			);
+			path = NemoSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+		0BFE5D211E14D937002AB8C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B031ECE1E5C283C00FA6957 /* UserNotifications.framework */,
+				0BF905441E495F6700F0F794 /* NemoSDK.framework */,
+				0BFE5D221E14D937002AB8C5 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BFE5D241E14D954002AB8C5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0BF472DE1E0BC3BE002671FA /* VideoManager.h */,
+				0BF472DF1E0BC3BE002671FA /* VideoManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B1905A41DB5F75D00D05DC8 /* NemoSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B1905D21DB5F75D00D05DC8 /* Build configuration list for PBXNativeTarget "NemoSDKDemo" */;
+			buildPhases = (
+				0B1905A11DB5F75D00D05DC8 /* Sources */,
+				0B1905A31DB5F75D00D05DC8 /* Resources */,
+				0B1905A21DB5F75D00D05DC8 /* Frameworks */,
+				0BA972A91DB620A5005F65C4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NemoSDKDemo;
+			productName = NemoSDKDemo;
+			productReference = 0B1905A51DB5F75D00D05DC8 /* NemoSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B1905BD1DB5F75D00D05DC8 /* NemoSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B1905D51DB5F75D00D05DC8 /* Build configuration list for PBXNativeTarget "NemoSDKDemoTests" */;
+			buildPhases = (
+				0B1905BA1DB5F75D00D05DC8 /* Sources */,
+				0B1905BB1DB5F75D00D05DC8 /* Frameworks */,
+				0B1905BC1DB5F75D00D05DC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B1905C01DB5F75D00D05DC8 /* PBXTargetDependency */,
+			);
+			name = NemoSDKDemoTests;
+			productName = NemoSDKDemoTests;
+			productReference = 0B1905BE1DB5F75D00D05DC8 /* NemoSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0B1905C81DB5F75D00D05DC8 /* NemoSDKDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B1905D81DB5F75D00D05DC8 /* Build configuration list for PBXNativeTarget "NemoSDKDemoUITests" */;
+			buildPhases = (
+				0B1905C51DB5F75D00D05DC8 /* Sources */,
+				0B1905C61DB5F75D00D05DC8 /* Frameworks */,
+				0B1905C71DB5F75D00D05DC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B1905CB1DB5F75D00D05DC8 /* PBXTargetDependency */,
+			);
+			name = NemoSDKDemoUITests;
+			productName = NemoSDKDemoUITests;
+			productReference = 0B1905C91DB5F75D00D05DC8 /* NemoSDKDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B19059D1DB5F75D00D05DC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = JackYang;
+				TargetAttributes = {
+					0B1905A41DB5F75D00D05DC8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6KU368K7QY;
+						ProvisioningStyle = Automatic;
+					};
+					0B1905BD1DB5F75D00D05DC8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0B1905A41DB5F75D00D05DC8;
+					};
+					0B1905C81DB5F75D00D05DC8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 72CXFS98W9;
+						ProvisioningStyle = Manual;
+						TestTargetID = 0B1905A41DB5F75D00D05DC8;
+					};
+				};
+			};
+			buildConfigurationList = 0B1905A01DB5F75D00D05DC8 /* Build configuration list for PBXProject "NemoSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B19059C1DB5F75D00D05DC8;
+			productRefGroup = 0B1905A61DB5F75D00D05DC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B1905A41DB5F75D00D05DC8 /* NemoSDKDemo */,
+				0B1905BD1DB5F75D00D05DC8 /* NemoSDKDemoTests */,
+				0B1905C81DB5F75D00D05DC8 /* NemoSDKDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B1905A31DB5F75D00D05DC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA96A111DB60A2B005F65C4 /* Main.storyboard in Resources */,
+				0B1905B51DB5F75D00D05DC8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B1905BC1DB5F75D00D05DC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B1905C71DB5F75D00D05DC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B1905A11DB5F75D00D05DC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B1905AA1DB5F75D00D05DC8 /* main.m in Sources */,
+				0BA8C1D41E233C07007562E1 /* MainViewController.m in Sources */,
+				0BF472E01E0BC3BE002671FA /* VideoManager.m in Sources */,
+				0B48BAAA1DF5036000407381 /* TabbarController.m in Sources */,
+				0BA96A0D1DB60A1B005F65C4 /* AppDelegate.m in Sources */,
+				0BA96A0E1DB60A1B005F65C4 /* ConnectedCallController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B1905BA1DB5F75D00D05DC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B59E81C1E31ACAA00484437 /* NemoSDKRegisterAndLoginTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B1905C51DB5F75D00D05DC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B1905CE1DB5F75D00D05DC8 /* NemoSDKDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B1905C01DB5F75D00D05DC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B1905A41DB5F75D00D05DC8 /* NemoSDKDemo */;
+			targetProxy = 0B1905BF1DB5F75D00D05DC8 /* PBXContainerItemProxy */;
+		};
+		0B1905CB1DB5F75D00D05DC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B1905A41DB5F75D00D05DC8 /* NemoSDKDemo */;
+			targetProxy = 0B1905CA1DB5F75D00D05DC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B1905D01DB5F75D00D05DC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B1905D11DB5F75D00D05DC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B1905D31DB5F75D00D05DC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6KU368K7QY;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../NemoSDK/\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NemoSDKDemo/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../NemoSDK/NemoSDK.framework/Headers";
+				INFOPLIST_FILE = NemoSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.wangzs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0B1905D41DB5F75D00D05DC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6KU368K7QY;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../NemoSDK/\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NemoSDKDemo/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../NemoSDK/NemoSDK.framework/Headers";
+				INFOPLIST_FILE = NemoSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.wangzs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0B1905D61DB5F75D00D05DC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../NemoSDK/\"";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../NemoSDK/NemoSDK.framework/Headers";
+				INFOPLIST_FILE = NemoSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.NemoSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NemoSDKDemo.app/NemoSDKDemo";
+			};
+			name = Debug;
+		};
+		0B1905D71DB5F75D00D05DC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../NemoSDK/\"";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../NemoSDK/NemoSDK.framework/Headers";
+				INFOPLIST_FILE = NemoSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.NemoSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NemoSDKDemo.app/NemoSDKDemo";
+			};
+			name = Release;
+		};
+		0B1905D91DB5F75D00D05DC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 72CXFS98W9;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = NemoSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cbfec422-9956-429c-9f2a-42a90142d0e8";
+				PROVISIONING_PROFILE_SPECIFIER = NemoOfficeDevProfile;
+				TEST_TARGET_NAME = NemoSDKDemo;
+			};
+			name = Debug;
+		};
+		0B1905DA1DB5F75D00D05DC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 72CXFS98W9;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = NemoSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ainemo.office.dev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cbfec422-9956-429c-9f2a-42a90142d0e8";
+				PROVISIONING_PROFILE_SPECIFIER = NemoOfficeDevProfile;
+				TEST_TARGET_NAME = NemoSDKDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B1905A01DB5F75D00D05DC8 /* Build configuration list for PBXProject "NemoSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1905D01DB5F75D00D05DC8 /* Debug */,
+				0B1905D11DB5F75D00D05DC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B1905D21DB5F75D00D05DC8 /* Build configuration list for PBXNativeTarget "NemoSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1905D31DB5F75D00D05DC8 /* Debug */,
+				0B1905D41DB5F75D00D05DC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B1905D51DB5F75D00D05DC8 /* Build configuration list for PBXNativeTarget "NemoSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1905D61DB5F75D00D05DC8 /* Debug */,
+				0B1905D71DB5F75D00D05DC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B1905D81DB5F75D00D05DC8 /* Build configuration list for PBXNativeTarget "NemoSDKDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B1905D91DB5F75D00D05DC8 /* Debug */,
+				0B1905DA1DB5F75D00D05DC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B19059D1DB5F75D00D05DC8 /* Project object */;
+}
