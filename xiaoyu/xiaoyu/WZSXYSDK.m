@@ -53,6 +53,7 @@ static WZSXYSDK *xysdk;
     
 }
 
+#pragma mark NemoSDKDelegate-通话状态回调
 - (void)nemoSDKDidCall:(NSString *)number
           stateChanged:(NemoCallState)callState
                 reason:(NSString *)reason{
@@ -85,24 +86,30 @@ static WZSXYSDK *xysdk;
             
             //提示聊天断开原因
             if ([reason isEqualToString:@"CANCEL"]) {
-                //对方提前挂断,隐藏接听画面
+                //呼叫方提前挂断,隐藏接听画面
                 [_comingView comingCallCancel];
                 [MBProgressHUD show:@"已取消通话" icon:nil view:nil];
             }else if ([reason isEqualToString:@"BUSY"]){
+                //对方拒接接听电话
                 [MBProgressHUD show:@"对方忙线中" icon:nil view:nil];
             }else if ([reason isEqualToString:@"STATUS_OK"]){
+                //接通成功一方挂电话或接听方拒绝接听电话
                 [MBProgressHUD show:@"通话已结束" icon:nil view:nil];
             }else if ([reason isEqualToString:@"PEER_NOT_FOUND"]){
+                //长时间呼叫无人接听
                 [MBProgressHUD show:@"无人应答" icon:nil view:nil];
+            }else if ([reason isEqualToString:@"PEER_NET_DISCONNECT"]){
+                [MBProgressHUD show:@"对方网络故障" icon:nil view:nil];
+            }else if ([reason isEqualToString:@"Network error"]){
+                [MBProgressHUD show:@"网络故障" icon:nil view:nil];
             }
-            
         }
             break;
     }
     
 }
 
-
+#pragma mark NemoSDKDelegate-接听回调
 - (void)nemoSDKDidReceiveCall:(NSString *)number displayName:(NSString *)displayName{
     
     //播放声音
@@ -116,9 +123,10 @@ static WZSXYSDK *xysdk;
     
 }
 
+#pragma mark NemoSDKDelegate-视频数据回调
 - (void)nemoSDKDidVideoChanged:(NSArray<NemoLayout *> *)videos{
     [[VideoManager sharedInstance] videosInSessionChanges:videos];
-    //对方聊天画面传过来时,铃音和提示画面停止
+    //接听方接听电话时,铃音和提示画面停止
     [_player stop];
     [_hud hide:YES];
 }

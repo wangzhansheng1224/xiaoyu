@@ -44,7 +44,7 @@
     
     for (int i = 0; i<4; i++) {
         UIButton *btn = [[UIButton alloc]init];
-        btn.frame = CGRectMake(20+100*i, 20, 80, 40);
+        btn.frame = CGRectMake(20+100*i, 20, 80, 60);
         btn.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
         btn.tag = 1000+i;
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
