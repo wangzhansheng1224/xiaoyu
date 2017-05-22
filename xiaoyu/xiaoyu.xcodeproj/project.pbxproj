@@ -17,7 +17,6 @@
 		D26140361EC4057D002E9ACE /* xiaoyuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140351EC4057D002E9ACE /* xiaoyuUITests.m */; };
 		D26140441EC406EA002E9ACE /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26140431EC406EA002E9ACE /* NemoSDK.framework */; };
 		D26140461EC4073D002E9ACE /* NemoSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D26140431EC406EA002E9ACE /* NemoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D26140491EC408FC002E9ACE /* UIView+PPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140481EC408FC002E9ACE /* UIView+PPCategory.m */; };
 		D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140511EC410AE002E9ACE /* ConnectedCallController.m */; };
 		D26140551EC410CD002E9ACE /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140541EC410CD002E9ACE /* VideoManager.m */; };
 		D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D261405C1EC4485A002E9ACE /* WZSXYSDK.m */; };
@@ -26,6 +25,7 @@
 		D28DBF431ECAF5FB006F8350 /* MBProgressHUD+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = D28DBF411ECAF5FB006F8350 /* MBProgressHUD+FX.m */; };
 		D28DBF441ECAF5FB006F8350 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF421ECAF5FB006F8350 /* MBProgressHUD.bundle */; };
 		D28DBF461ECBF4D0006F8350 /* ringtone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF451ECBF4D0006F8350 /* ringtone.wav */; };
+		D2E48BDD1ED27F6900B2D599 /* ComingCallBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E48BDC1ED27F6900B2D599 /* ComingCallBackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +76,6 @@
 		D26140351EC4057D002E9ACE /* xiaoyuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoyuUITests.m; sourceTree = "<group>"; };
 		D26140371EC4057D002E9ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D26140431EC406EA002E9ACE /* NemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NemoSDK.framework; sourceTree = "<group>"; };
-		D26140471EC408FC002E9ACE /* UIView+PPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PPCategory.h"; sourceTree = "<group>"; };
-		D26140481EC408FC002E9ACE /* UIView+PPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PPCategory.m"; sourceTree = "<group>"; };
 		D26140501EC410AE002E9ACE /* ConnectedCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedCallController.h; sourceTree = "<group>"; };
 		D26140511EC410AE002E9ACE /* ConnectedCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedCallController.m; sourceTree = "<group>"; };
 		D26140531EC410CD002E9ACE /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
@@ -91,6 +89,8 @@
 		D28DBF411ECAF5FB006F8350 /* MBProgressHUD+FX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+FX.m"; sourceTree = "<group>"; };
 		D28DBF421ECAF5FB006F8350 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		D28DBF451ECBF4D0006F8350 /* ringtone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringtone.wav; sourceTree = "<group>"; };
+		D2E48BDB1ED27F6900B2D599 /* ComingCallBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComingCallBackView.h; sourceTree = "<group>"; };
+		D2E48BDC1ED27F6900B2D599 /* ComingCallBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComingCallBackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,14 +150,14 @@
 				D26140141EC4057D002E9ACE /* AppDelegate.m */,
 				D26140161EC4057D002E9ACE /* ViewController.h */,
 				D26140171EC4057D002E9ACE /* ViewController.m */,
-				D26140471EC408FC002E9ACE /* UIView+PPCategory.h */,
-				D26140481EC408FC002E9ACE /* UIView+PPCategory.m */,
 				D26140501EC410AE002E9ACE /* ConnectedCallController.h */,
 				D26140511EC410AE002E9ACE /* ConnectedCallController.m */,
 				D26140531EC410CD002E9ACE /* VideoManager.h */,
 				D26140541EC410CD002E9ACE /* VideoManager.m */,
 				D261405B1EC4485A002E9ACE /* WZSXYSDK.h */,
 				D261405C1EC4485A002E9ACE /* WZSXYSDK.m */,
+				D2E48BDB1ED27F6900B2D599 /* ComingCallBackView.h */,
+				D2E48BDC1ED27F6900B2D599 /* ComingCallBackView.m */,
 				D28DBF451ECBF4D0006F8350 /* ringtone.wav */,
 				D26140191EC4057D002E9ACE /* Main.storyboard */,
 				D261401C1EC4057D002E9ACE /* Assets.xcassets */,
@@ -356,12 +356,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26140491EC408FC002E9ACE /* UIView+PPCategory.m in Sources */,
 				D26140181EC4057D002E9ACE /* ViewController.m in Sources */,
 				D26140151EC4057D002E9ACE /* AppDelegate.m in Sources */,
 				D28DBF431ECAF5FB006F8350 /* MBProgressHUD+FX.m in Sources */,
 				D26140121EC4057D002E9ACE /* main.m in Sources */,
 				D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */,
+				D2E48BDD1ED27F6900B2D599 /* ComingCallBackView.m in Sources */,
 				D26140551EC410CD002E9ACE /* VideoManager.m in Sources */,
 				D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */,
 				D28DBF3E1ECAF5F7006F8350 /* MBProgressHUD.m in Sources */,
