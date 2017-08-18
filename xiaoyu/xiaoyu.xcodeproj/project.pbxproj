@@ -15,8 +15,6 @@
 		D26140201EC4057D002E9ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D261401E1EC4057D002E9ACE /* LaunchScreen.storyboard */; };
 		D261402B1EC4057D002E9ACE /* xiaoyuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D261402A1EC4057D002E9ACE /* xiaoyuTests.m */; };
 		D26140361EC4057D002E9ACE /* xiaoyuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140351EC4057D002E9ACE /* xiaoyuUITests.m */; };
-		D26140441EC406EA002E9ACE /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26140431EC406EA002E9ACE /* NemoSDK.framework */; };
-		D26140461EC4073D002E9ACE /* NemoSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D26140431EC406EA002E9ACE /* NemoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D26140521EC410AE002E9ACE /* ConnectedCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140511EC410AE002E9ACE /* ConnectedCallController.m */; };
 		D26140551EC410CD002E9ACE /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D26140541EC410CD002E9ACE /* VideoManager.m */; };
 		D261405D1EC4485A002E9ACE /* WZSXYSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = D261405C1EC4485A002E9ACE /* WZSXYSDK.m */; };
@@ -26,6 +24,7 @@
 		D28DBF441ECAF5FB006F8350 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF421ECAF5FB006F8350 /* MBProgressHUD.bundle */; };
 		D28DBF461ECBF4D0006F8350 /* ringtone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF451ECBF4D0006F8350 /* ringtone.wav */; };
 		D2E48BDD1ED27F6900B2D599 /* ComingCallBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E48BDC1ED27F6900B2D599 /* ComingCallBackView.m */; };
+		D2E59B141F46D50600970EDA /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E59B131F46D50600970EDA /* NemoSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D26140461EC4073D002E9ACE /* NemoSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +73,6 @@
 		D26140311EC4057D002E9ACE /* xiaoyuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiaoyuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26140351EC4057D002E9ACE /* xiaoyuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiaoyuUITests.m; sourceTree = "<group>"; };
 		D26140371EC4057D002E9ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D26140431EC406EA002E9ACE /* NemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NemoSDK.framework; sourceTree = "<group>"; };
 		D26140501EC410AE002E9ACE /* ConnectedCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedCallController.h; sourceTree = "<group>"; };
 		D26140511EC410AE002E9ACE /* ConnectedCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedCallController.m; sourceTree = "<group>"; };
 		D26140531EC410CD002E9ACE /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
@@ -91,6 +88,7 @@
 		D28DBF451ECBF4D0006F8350 /* ringtone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringtone.wav; sourceTree = "<group>"; };
 		D2E48BDB1ED27F6900B2D599 /* ComingCallBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComingCallBackView.h; sourceTree = "<group>"; };
 		D2E48BDC1ED27F6900B2D599 /* ComingCallBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComingCallBackView.m; sourceTree = "<group>"; };
+		D2E59B131F46D50600970EDA /* NemoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NemoSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26140441EC406EA002E9ACE /* NemoSDK.framework in Frameworks */,
+				D2E59B141F46D50600970EDA /* NemoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +120,6 @@
 		D26140041EC4057D002E9ACE = {
 			isa = PBXGroup;
 			children = (
-				D26140431EC406EA002E9ACE /* NemoSDK.framework */,
 				D261400F1EC4057D002E9ACE /* xiaoyu */,
 				D26140291EC4057D002E9ACE /* xiaoyuTests */,
 				D26140341EC4057D002E9ACE /* xiaoyuUITests */,
@@ -143,6 +140,7 @@
 		D261400F1EC4057D002E9ACE /* xiaoyu */ = {
 			isa = PBXGroup;
 			children = (
+				D2E59B131F46D50600970EDA /* NemoSDK.framework */,
 				D28DBF3F1ECAF5FB006F8350 /* MBProgressHuDHelper */,
 				D28DBF3B1ECAF5F7006F8350 /* MBProgressHUD */,
 				D28DBEE71ECAA17C006F8350 /* BG.png */,
@@ -518,9 +516,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework,
+					/Users/wangzhansheng/xiaoyu/xiaoyu/xiaoyu/NemoSDK.framework,
+					"$(PROJECT_DIR)/xiaoyu",
 				);
-				HEADER_SEARCH_PATHS = /Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework/Headers;
+				HEADER_SEARCH_PATHS = /Users/wangzhansheng/xiaoyu/xiaoyu/xiaoyu/NemoSDK.framework/Headers;
 				INFOPLIST_FILE = xiaoyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -538,9 +537,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework,
+					/Users/wangzhansheng/xiaoyu/xiaoyu/xiaoyu/NemoSDK.framework,
+					"$(PROJECT_DIR)/xiaoyu",
 				);
-				HEADER_SEARCH_PATHS = /Users/wangzhansheng/Desktop/xiaoyu/NemoSDK.framework/Headers;
+				HEADER_SEARCH_PATHS = /Users/wangzhansheng/xiaoyu/xiaoyu/xiaoyu/NemoSDK.framework/Headers;
 				INFOPLIST_FILE = xiaoyu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
