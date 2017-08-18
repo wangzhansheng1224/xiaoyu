@@ -25,6 +25,7 @@
 		D28DBF461ECBF4D0006F8350 /* ringtone.wav in Resources */ = {isa = PBXBuildFile; fileRef = D28DBF451ECBF4D0006F8350 /* ringtone.wav */; };
 		D2E48BDD1ED27F6900B2D599 /* ComingCallBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E48BDC1ED27F6900B2D599 /* ComingCallBackView.m */; };
 		D2E59B141F46D50600970EDA /* NemoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E59B131F46D50600970EDA /* NemoSDK.framework */; };
+		D2E59B591F46D95800970EDA /* NemoSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D2E59B131F46D50600970EDA /* NemoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D2E59B591F46D95800970EDA /* NemoSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
